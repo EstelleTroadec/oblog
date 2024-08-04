@@ -26,6 +26,16 @@ const controller = {
         const foundArticles = articles.filter(article => article.category === category);
         // render the list of articles for the matching category
         res.render('articlesList', {articles: foundArticles, category});
+    },
+
+    // methode to render the author page
+    authorPage: (req, res) => {
+        // get the auhor name from the request parameters
+        const author = req.params.name;
+        // find the articles with the matching author
+        const foundArticles = articles.filter(article => article.author === author);
+        // render the list of articles by author
+        res.render('articlesList', {articles: foundArticles, author});
     }
 
 }
