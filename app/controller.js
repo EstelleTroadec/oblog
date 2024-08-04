@@ -16,6 +16,16 @@ const controller = {
         const foundArticle = articles.find(article => article.id === parseInt(articleID));
         // render the ejs article view
         res.render('article', {article: foundArticle});
+    },
+
+    // methode to render the category page
+    categoryPage: (req, res) => {
+        // get the category name from the request parameters
+        const category = req.params.name;
+        // find the articles with the matching category
+        const foundArticles = articles.filter(article => article.category === category);
+        // render the list of articles for the matching category
+        res.render('articlesList', {articles: foundArticles, category});
     }
 
 }

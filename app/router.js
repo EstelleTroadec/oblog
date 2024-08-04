@@ -7,6 +7,7 @@ const controller = require('./controller');
 
 router.get('/', controller.homePage);
 router.get('/article/:id', controller.articlePage);
+router.get('/category/:name', controller.categoryPage);
 
 
 
