@@ -21,12 +21,26 @@ app.set('views', './app/views');
 // define the path of the static files
 app.use(express.static('./static'));
 
+
+// path for the homepage
 app.get('/', (req, res) => {
     // render the ejs articlesList view
     res.render('articlesList', {
         articles: articles
     });
 });
+
+// path for the article page
+app.get('/article/:id', (req, res) => {
+    // get the article id from the request parameters
+    const articleID = req.params.id;
+    // find the article with the matching id (with parseInt to make sure we get an 'integer')
+    const foundArticle = articles.find(article => article.id === parseInt(articleID));
+
+    // render the ejs article view
+    res.render('article', { article: foundArticle});
+
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on port http://localhost:${PORT}`);
