@@ -1,6 +1,9 @@
 // impotr express
 const express = require('express');
 
+// import data
+const articles = require('./data/articles.json');
+
 // initialize express app (instance the HTTP server)
 const app = express();
 
@@ -18,9 +21,11 @@ app.set('views', './app/views');
 // define the path of the static files
 app.use(express.static('./static'));
 
-// send the HTML file to the browser
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/integration/index.html');
+    // render the ejs articlesList view
+    res.render('articlesList', {
+        articles: articles
+    });
 });
 
 app.listen(PORT, () => {
