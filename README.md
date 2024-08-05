@@ -2,7 +2,7 @@
 
 ## Présentation du projet
 
-Blog de veille technologique
+Blog de veille technologique et d'anecdotes de développeurs
 
 ## Stack technique
 
@@ -14,6 +14,7 @@ Blog de veille technologique
 - EJS
 
 ### Back-end
+
 - Node.js
 - Express
 
