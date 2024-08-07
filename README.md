@@ -2,21 +2,13 @@
 
 ## Présentation du projet
 
-Blog de veille technologique et d'anecdotes de développeurs
+Blog de veille technologique et d'anecdotes de développeurs, développé à titre d'exercice dans le cadre d'une formation de développeur web et web mobile.
 
-## Stack technique
-
-### Front-end
-
-- HTML5
-- CSS3
-- JavaScript
-- EJS
-
-### Back-end
+## Technologies utilisées
 
 - Node.js
 - Express
+- EJS
 
 ### Outils
 
