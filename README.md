@@ -2,7 +2,7 @@
 
 ## Présentation du projet
 
-Blog de veille technologique et d'anecdotes de développeurs, développé à titre d'exercice dans le cadre d'une formation de développeur web et web mobile.
+Blog fictif de veille technologique et d'anecdotes de développeurs, développé à titre d'exercice dans le cadre d'une formation de développeur web et web mobile.
 
 ## Technologies utilisées
 
